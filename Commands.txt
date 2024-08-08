@@ -1,0 +1,23 @@
+# Attack 1: PeripheralScan
+
+# Attack 2: jammer.py
+sudo python3 jammer.py
+
+# Attack 3: noise_trans.py
+sudo python3 noise_trans.py
+
+# Attack 4: Authentication Bypass
+# Part 0
+./spoof_mac.sh fc:a2:94:6d:7f:0d
+sudo python3 ras_peripheral.py
+
+# Part 1
+hciconfig
+./spoof_mac.sh d3:ea:a6:7d:56:27
+hciconfig
+
+# Part 2
+sudo python3 ras_peripheral.py
+
+# Attack 5: write_char.sh
+./write_char.sh
